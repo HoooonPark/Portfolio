@@ -240,7 +240,8 @@ body{
 
 .l-side-nav{
 	position:absolute;
-	left:0;
+	left: 10px;
+	z-index: 5;
 	display:-webkit-box;
 	display:-webkit-flex;
 	display:-ms-flexbox;
@@ -269,12 +270,11 @@ body{
 
 @media (max-width: 1180px){
 	.l-side-nav{
-	display:none;
-	}
+		display:none;
+		}
 
 ;
 	}
-
 .l-main-content{
 	position:relative;
 	width:100%;
@@ -538,11 +538,17 @@ body{
 
 @media (max-width: 767px){
 	.header--cta{
-	display:none;
+		display:none;
 	}
 
 ;
 	}
+/* @media (max-width: 600px)and(orientation: landscape){
+	.header--logo{
+		display: none;
+	}
+;} */
+
 
 .side-nav{
 	position:relative;
@@ -656,7 +662,7 @@ body{
 
 @media (max-width: 1180px){
 	.intro{
-	max-width:100%;
+	max-width:90%;
 	}
 
 ;
@@ -666,10 +672,6 @@ body{
 	position:relative;
 	height:475px;
 	}
-
-.intro--banner img{
-	opacity: 0.7;
-}
 
 .intro--banner::before{
 	content:"";
@@ -744,6 +746,7 @@ body{
 	position:absolute;
 	bottom:21px;
 	right:-12px;
+	opacity: 0.7;
 	}
 
 .intro--options{
@@ -830,7 +833,7 @@ body{
 	}
 
 .intro--options>a:last-child{
-	margin-bottom:0;
+	margin-bottom:20px;
 	}
 
 ;
@@ -841,33 +844,33 @@ body{
 	height:360px;
 	}
 
-.intro--banner h1{
-	font-size:55px;
-	}
+	.intro--banner h1{
+		font-size:55px;
+		}
 
-.intro--banner img{
-	display:none;
-	}
+	.intro--banner img{
+		display:flex;
+		}
 
 ;
 	}
 
 @media (max-width: 600px) and (max-height: 750px){
 	.intro--banner{
-	height:auto;
+		height:auto;
 	}
 
-.intro--banner::before,.intro--banner::after{
-	display:none;
-	}
+	.intro--banner::before,.intro--banner::after{
+		display:none;
+		}
 
-.intro--banner h1{
-	margin-top:0;
-	}
+	.intro--banner h1{
+		margin-top:0;
+		}
 
-.intro--options{
-	display:none;
-	}
+	.intro--options{
+		display:block;
+		}
 
 ;
 	}
@@ -1123,7 +1126,7 @@ body{
 	height:475px;
 	}
 	
-.about--banner::before{
+/* .about--banner::before{
 	content:"";
 	position:absolute;
 	top:20px;
@@ -1145,7 +1148,7 @@ body{
 	width:10px;
 	height:10px;
 	background-color:#0f33ff;
-	}
+	} */
 
 .about--banner h2{
 	position:relative;
@@ -1154,9 +1157,10 @@ body{
 	font-weight:900;
 	line-height:1;
 	z-index:1;
+	text-shadow: 1px 5px 10px rgb(240, 105, 72);
 	}
 
-.about--banner h2::before{
+/* .about--banner h2::before{
 	content:"";
 	position:absolute;
 	top:60px;
@@ -1175,7 +1179,7 @@ body{
 	width:10px;
 	height:10px;
 	background-color:#0f33ff;
-	}
+	} */
 
 .about--banner a{
 	padding:5px 17px 5px 0;
@@ -1226,8 +1230,10 @@ body{
 	width:150px;
 	height:75px;
 	text-decoration:none;
+	text-align: center;
 	color:#fff;
-	border:4px solid #0b21a1;
+	/* border:4px solid #0b21a1; */
+	box-shadow: 0 0 15px rgb(240, 105, 72);
 	border-radius: 3px;
 	background-position:center;
 	background-size:cover;
@@ -1239,11 +1245,11 @@ body{
 	}
 
 .about--options>a:nth-child(2){
-	background-image:url("../img/about-philosophy.jpg");
+	background-image:url("../img/coconut.png");
 	}
 
 .about--options>a:nth-child(3){
-	background-image:url("../img/about-history.jpg");
+	background-image:url("../img/github.png");
 	}
 
 .about--options>a:hover h3{
@@ -1265,30 +1271,14 @@ body{
 	height:305px;
 	}
 
-.about--banner::before{
-	top:0;
-	left:125px;
-	}
 
-.about--banner::after{
-	top:35px;
-	left:260px;
-	}
 
 .about--banner h2{
 	margin-top:10px;
 	font-size:44px;
 	}
 
-.about--banner h2::before{
-	top:28px;
-	left:168px;
-	}
 
-.about--banner h2::after{
-	top:163px;
-	left:163px;
-	}
 
 .about--banner img{
 	width:315px;
@@ -1300,39 +1290,38 @@ body{
 @media (max-width: 600px){
 	.about--banner{
 	height:auto;
+	bottom:10%;
 	}
 
-.about--banner::before{
-	left:155px;
-	}
-
-.about--banner::after{
-	left:310px;
-	}
 
 .about--banner h2{
 	margin-top:0;
 	font-size:55px;
 	}
 
-.about--banner h2::before{
-	top:43px;
-	left:214px;
-	}
 
-.about--banner h2::after{
-	top:205px;
-	left:205px;
-	}
 
 .about--banner img{
-	display:none;
+	display:flex;
 	}
 
 .about--options{
-	display:none;
+	display:flex;
+	width:80%;
+	bottom: 15%;
+	position:fixed;
+	margin: 20px;
+	align-items: center;
 	}
-
+.about--options> a:nth-child(1){
+	margin-left: 20px;
+}
+.about--options> a:nth-child(2){
+	margin-left: 20px;
+}
+.about--options> a:nth-child(3){
+	margin-left: 20px;
+}
 ;
 	}
 

@@ -906,8 +906,12 @@ body{
 
 .work h2{
 	margin:0 0 20px 0;
-	font-size:30px;
 	text-align:center;
+	font-size:68px;
+	font-weight:900;
+	line-height:1;
+	z-index:1;
+	text-shadow: 1px 5px 10px rgb(240, 105, 72);
 	}
 
 .work--lockup{
@@ -1328,16 +1332,30 @@ body{
 
 
 .contact{
-	position:fixed;
-	top:0;
-	left:0;
-	width:100%;
+	position:relative;
+	/* top:0;
+	left:0; */
+	max-width:90%;
 	height:100%;
+	display: flex;
+	justify-content: center;
 	background-image:url("../img/contact-visual.png");
 	background-position:center;
 	background-size: contain;
 	background-repeat:no-repeat;
+	margin:0 auto;
 	}
+.contact--banner{
+	position:relative;
+	height: 20%;
+	margin-left:15%;
+	margin-top:15%;
+	font-size:68px;
+	font-weight:900;
+	line-height:1;
+	z-index:1;
+	text-shadow: 1px 5px 10px rgb(240, 105, 72);
+}
 
 .contact--lockup{
 	position:relative;
